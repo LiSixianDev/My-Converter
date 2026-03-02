@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>Unit Converter</h1>
+    <p>Convert Centimeters to Inches:</p>
+
+    <input type="number" id="cmInput" placeholder="Enter CM" oninput="convert()">
+    <span> = </span>
+    <input type="number" id="inchResult" placeholder="Inches" readonly>
+
+    <hr> <script>
+        function convert() {
+            // 1. Get the value from the CM box
+            var cm = document.getElementById('cmInput').value;
+            
+            // 2. Do the math (CM divided by 2.54)
+            var inches = cm / 2.54;
+            
+            // 3. Put the result in the second box, rounded to 2 decimals
+            document.getElementById('inchResult').value = inches.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>
